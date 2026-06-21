@@ -1,11 +1,11 @@
-🕵️ Dark Web Tor Crawler
+ Dark Web Tor Crawler
 
 A production‑ready Python scraper for .onion sites, routing all traffic through the Tor anonymity network.
 Built for authorised security research, threat intelligence gathering, and OSINT investigations.
 
 ---
 
-⚠️ LEGAL & ETHICAL DISCLAIMER
+LEGAL & ETHICAL DISCLAIMER
 
 READ THIS BEFORE USING THE TOOL
 
@@ -17,19 +17,19 @@ READ THIS BEFORE USING THE TOOL
 
 ---
 
-✨ Features
+ Features
 
-· 🔒 Full Tor integration – All HTTP/HTTPS traffic is routed through the Tor SOCKS5 proxy.
-· 🔄 Automatic IP renewal – Requests a new exit node at a configurable interval (stem).
-· 🧠 Intelligent retries – Exponential backoff with retry logic for transient network failures.
-· 🔗 Recursive crawling – Follows .onion links up to a user‑defined depth.
-· 📄 Structured output – Extracts titles, text previews, and all hyperlinks.
-· 🖥️ Command‑line friendly – Full parameter control (depth, max pages, output file).
-· 🛡️ Polite scraping – Configurable delays to avoid overwhelming target servers.
+· Full Tor integration – All HTTP/HTTPS traffic is routed through the Tor SOCKS5 proxy.
+· Automatic IP renewal – Requests a new exit node at a configurable interval (stem).
+· Intelligent retries – Exponential backoff with retry logic for transient network failures.
+· Recursive crawling – Follows .onion links up to a user‑defined depth.
+·  Structured output – Extracts titles, text previews, and all hyperlinks.
+·  Command‑line friendly – Full parameter control (depth, max pages, output file).
+·  Polite scraping – Configurable delays to avoid overwhelming target servers.
 
 ---
 
-📋 Prerequisites
+Prerequisites
 
 Requirement Notes
 Python 3.7+ Tested on 3.8–3.12
@@ -38,7 +38,7 @@ Network access Must be able to reach the Tor network (no outbound firewall block
 
 ---
 
-🔧 Installation
+ Installation
 
 1. Install and configure Tor
 
@@ -100,7 +100,7 @@ pip install requests beautifulsoup4 stem urllib3
 
 ---
 
-🚀 Usage
+Usage
 
 Basic command
 
@@ -129,7 +129,7 @@ url (positional) Required Starting .onion URL to crawl
 
 ---
 
-📦 Output Example
+ Output Example
 
 When you run the crawler, you'll see real‑time logs in the terminal:
 
@@ -166,7 +166,7 @@ Preview: We are a team of security researchers...
 
 ---
 
-⚙️ Configuration (Inside the Script)
+ Configuration (Inside the Script)
 
 You can tweak the following constants at the top of dark_crawler.py without touching the core logic:
 
@@ -181,7 +181,7 @@ LOG_LEVEL logging.INFO Change to DEBUG for verbose troubleshooting
 
 ---
 
-🧠 How It Works
+How It Works
 
 1. Session initialisation – Creates a requests.Session with SOCKS5 proxying to Tor.
 2. IP rotation – Uses stem to connect to Tor's control port and send a NEWNYM signal, requesting a fresh exit circuit.
@@ -194,8 +194,7 @@ LOG_LEVEL logging.INFO Change to DEBUG for verbose troubleshooting
 6. Output – Prints a summary to stdout and optionally writes detailed results to a file.
 
 ---
-
-🛠️ Troubleshooting
+Troubleshooting
 
 Issue Likely Cause Solution
 Tor is not available Tor daemon isn't running Run sudo systemctl start tor or check your OS services
@@ -207,7 +206,7 @@ Only static HTML is parsed Site uses JavaScript to render content This scraper d
 
 ---
 
-📁 Project Structure
+Project Structure
 
 ```
 .
@@ -218,7 +217,7 @@ Only static HTML is parsed Site uses JavaScript to render content This scraper d
 
 ---
 
-🤝 Contributing
+ Contributing
 
 Contributions that improve reliability, add new parsers, or enhance the output format are welcome.
 
@@ -230,13 +229,13 @@ Guidelines:
 
 ---
 
-📄 License
+License
 
 MIT License – you are free to use, modify, and distribute this software for any purpose, provided the original copyright notice and this permission notice are included. However, the license does not grant immunity from legal prosecution – you remain fully responsible for your actions when using this tool.
 
 ---
 
-🙏 Acknowledgements
+ Acknowledgements
 
 · Tor Project – for the anonymity network.
 · stem library – for seamless Tor controller integration.
@@ -244,4 +243,4 @@ MIT License – you are free to use, modify, and distribute this software for an
 
 ---
 
-If you find this tool useful for your security research, please ⭐ star the repository and use it responsibly.
+If you find this tool useful for your security research, please  star the repository and use it responsibly.
